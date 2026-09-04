@@ -1,27 +1,29 @@
-/* تحسين استجابة المكونات لجميع الشاشات */
-img {
-  max-width: 100%;
-  height: auto;
+/* 1. تطبيق صورة المباني على خلفية الصفحة بالكامل */
+body {
+  background-image: linear-gradient(rgba(248, 250, 252, 0.75), rgba(248, 250, 252, 0.75)), 
+                    url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1920') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
 }
 
-@media (max-width: 768px) {
-  /* تعديل الهيدر والنصوص للشاشات الصغيرة */
-  .hero-content h1 {
-    font-size: 1.8rem !important;
-  }
-  
-  .hero-content p {
-    font-size: 1rem !important;
-  }
+/* 2. جعل جميع الحاويات والسكاشن شفافة لتظهر الخلفية من ورائها */
+#app, 
+main, 
+.home-page
 
-  /* جعل الأزرار تأخذ العرض الكامل على الهواتف */
-  .cta-group {
-    flex-direction: column;
-    width: 100%;
-  }
+.bg-white {
+  background-color: transparent !important;
+  background-image: none !important;
+}
 
-  .btn-primary, .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
+/* 3. الإبقاء على لون أبيض خفيف للكروت فقط حتى تظل النصوص واضحة */
+.card,  
+.city-card {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(4px);
 }
