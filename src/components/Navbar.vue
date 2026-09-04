@@ -1,15 +1,24 @@
 <template>
   <nav class="custom-navbar">
-    <div class="container">
-      <router-link to="/" class="brand-logo">UniRoom</router-link>
+    <div class="container nav-wrapper">
+      <!-- أزرار تسجيل الدخول والدخول (اليسار) -->
+      <div class="auth-btns">
+        <router-link to="/register" class="btn-blue-pill">سجّل الآن</router-link>
+        <router-link to="/login" class="btn-text">تسجيل الدخول</router-link>
+      </div>
+
+      <!-- روابط التصفح (الوسط) -->
       <div class="nav-links">
-        <router-link to="/" class="nav-item">الرئيسية</router-link>
-        <router-link to="/about" class="nav-item">عن المنصة</router-link>
-        <router-link to="/contact" class="nav-item">تواصل معنا</router-link>
+        <router-link to="/report" class="nav-item">بلّغ عن مشكلة</router-link>
+        <router-link to="/search" class="nav-item">ابحث عن سكن</router-link>
+        <router-link to="/" class="nav-item active">الرئيسية</router-link>
       </div>
-      <div class="auth-btn">
-        <router-link to="/login" class="btn-login">تسجيل الدخول</router-link>
-      </div>
+
+      <!-- اللوجو (اليمين) -->
+      <router-link to="/" class="brand-logo">
+        <span class="logo-name">UniRoom</span>
+        <span class="logo-box">🏠</span>
+      </router-link>
     </div>
   </nav>
 </template>
@@ -17,46 +26,77 @@
 <style scoped>
 .custom-navbar {
   background-color: #ffffff;
-  border-bottom: 2px solid var(--primary-light);
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.container {
+
+.nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
+
 .brand-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   text-decoration: none;
 }
+
+.logo-name {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #1e293b;
+}
+
+.logo-box {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
+
 .nav-item {
-  color: var(--primary-medium);
+  color: #64748b;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s;
+  font-size: 0.95rem;
 }
-.nav-item:hover, .router-link-active {
-  color: var(--primary-dark);
-  font-weight: bold;
+
+.nav-item.active, .nav-item:hover {
+  color: #1d4ed8;
+  font-weight: 600;
 }
-.btn-login {
-  background-color: var(--primary-dark);
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 8px;
+
+.auth-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-blue-pill {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.4rem;
+  border-radius: 50px; /* الشكل البيضاوي الدائري */
   text-decoration: none;
-  transition: background 0.2s;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
-.btn-login:hover {
-  background-color: var(--primary-medium);
+
+.btn-text {
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 </style>

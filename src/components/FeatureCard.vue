@@ -1,56 +1,56 @@
 <template>
   <div class="feature-card">
-    <div class="icon-wrapper">
-      <i :class="icon"></i>
+    <div class="icon-box">
+      <span class="icon-placeholder">✨</span>
     </div>
-    <h3>{{ title }}</h3>
-    <p>{{ description }}</p>
+    <h3 class="card-title">{{ title }}</h3>
+    <p class="card-desc">{{ description }}</p>
   </div>
 </template>
 
 <script setup>
 defineProps({
   title: String,
-  description: String,
-  icon: {
-    type: String,
-    default: 'bi bi-star'
-  }
+  description: String
 })
 </script>
 
 <style scoped>
 .feature-card {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid rgba(134, 166, 223, 0.3) !important;
+  border-radius: 16px;
+  padding: 2.5rem 1.8rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(50, 78, 123, 0.05);
+  transition: all 0.3s ease;
 }
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(50, 78, 123, 0.1);
+  transform: translateY(-8px);
+  border-color: #86A6DF !important;
+  box-shadow: 0 15px 35px rgba(50, 78, 123, 0.12);
 }
-.icon-wrapper {
-  background-color: var(--bg-light);
-  color: var(--primary-dark);
-  width: 60px;
-  height: 60px;
+.icon-box {
+  background-color: rgba(134, 166, 223, 0.15);
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem auto;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
-.feature-card h3 {
-  color: var(--primary-dark);
-  margin-bottom: 0.75rem;
+.card-title {
+  color: #324E7B !important;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
 }
-.feature-card p {
-  color: #6b7280;
-  font-size: 0.95rem;
-  line-height: 1.5;
+.card-desc {
+  color: #5068A9 !important;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
 }
 </style>
