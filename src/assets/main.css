@@ -1,35 +1,29 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* 1. تطبيق صورة المباني على خلفية الصفحة بالكامل */
+body {
+  background-image: linear-gradient(rgba(248, 250, 252, 0.75), rgba(248, 250, 252, 0.75)), 
+                    url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1920') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+/* 2. جعل جميع الحاويات والسكاشن شفافة لتظهر الخلفية من ورائها */
+#app, 
+main, 
+.home-page
+
+.bg-white {
+  background-color: transparent !important;
+  background-image: none !important;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/* 3. الإبقاء على لون أبيض خفيف للكروت فقط حتى تظل النصوص واضحة */
+.card,  
+.city-card {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(4px);
 }
