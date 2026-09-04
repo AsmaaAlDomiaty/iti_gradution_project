@@ -33,3 +33,18 @@ a,
     padding: 0 2rem;
   }
 }
+:root {
+  --primary-dark: #324E7B;
+  --primary-light: #86A6DF;
+  --primary-medium: #5068A9;
+  --bg-light: #F8F8F8;
+  --text-dark: #1F2937;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  direction: rtl; /* لدعم اللغة العربية */
+}
