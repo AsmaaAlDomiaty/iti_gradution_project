@@ -1,36 +1,9 @@
 <template>
-  <div id="app" class="app-layout">
-    <Navbar />
-    <main class="main-content">
-      <router-view />
-    </main>
-    <Footer />
-  </div>
+<nav dir="rtl"><b>سكني</b><div><RouterLink to="/dashboard">لوحة التحكم</RouterLink><RouterLink to="/add-room">إضافة غرفة</RouterLink><RouterLink to="/report">الإبلاغ عن مشكلة</RouterLink></div></nav>
+<RouterView/>
 </template>
-
-<script setup>
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
-</script>
-
 <style>
-/* إعادة ضبط الشاشة وإلغاء أي خلفيات شفافة */
-#app, body, html {
-  background-image: none !important;
-  background-color: #f8fafc !important;
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  direction: rtl;
-}
-
-.app-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-}
+*{box-sizing:border-box}body{margin:0;background:#f8f8f8;font-family:Arial,sans-serif}
+nav{height:68px;background:#324E7B;color:white;padding:0 6%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+nav b{font-size:24px}nav div{display:flex;gap:8px;flex-wrap:wrap}nav a{color:white;text-decoration:none;padding:9px 13px;border-radius:8px}nav a:hover,nav a.router-link-active{background:#5068A9}
 </style>

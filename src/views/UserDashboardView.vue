@@ -1,0 +1,13 @@
+<template>
+<div class="page" dir="rtl"><div class="container"><div class="top"><div><h1>لوحة التحكم</h1><p>إدارة الغرف والبلاغات.</p></div><div><button @click="$router.push('/add-room')">+ إضافة غرفة</button> <button class="outline" @click="$router.push('/report')">الإبلاغ عن مشكلة</button></div></div>
+<div class="stats"><div><span>الغرف</span><b>{{store.rooms.length}}</b></div><div><span>البلاغات</span><b>{{store.reports.length}}</b></div></div>
+<h2>غرفي</h2><div v-if="store.rooms.length" class="rooms"><div v-for="r in store.rooms" :key="r.id" class="room"><img v-if="r.image" :src="r.image"><div><h3>{{r.title}}</h3><p>{{r.city}} · {{r.area}} م²</p><strong>{{r.price}} جنيه / شهر</strong><br><button @click="$router.push('/edit-room/'+r.id)">تعديل</button> <button class="danger" @click="remove(r.id)">حذف</button></div></div></div><div v-else class="empty">لا توجد غرف مضافة حتى الآن.</div>
+<h2>آخر البلاغات</h2><div v-if="store.reports.length" class="reports"><div v-for="r in store.reports.slice(0,5)" :key="r.id" class="report"><b>{{r.title}}</b><span>{{r.status}}</span></div></div><div v-else class="empty">لا توجد بلاغات حتى الآن.</div>
+</div></div>
+</template>
+<script setup>
+import {useRoomStore} from "../stores/roomStore";const store=useRoomStore();function remove(id){if(confirm("هل أنت متأكد من الحذف؟")){store.deleteRoom(id);alert("تم الحذف")}}
+</script>
+<style scoped>
+.page{min-height:100vh;padding:40px 20px}.container{max-width:1050px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}h1,h2,h3{color:#324E7B}.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:30px}.stats>div,.room,.report,.empty{background:white;border-radius:16px;padding:22px;box-shadow:0 6px 20px #324e7b14}.stats span{display:block;color:#666}.stats b{font-size:30px;color:#324E7B}.rooms{display:grid;grid-template-columns:1fr 1fr;gap:18px}.room{display:flex;gap:18px}.room img{width:170px;height:150px;object-fit:cover;border-radius:10px}.room button{margin-top:15px}.reports{display:grid;gap:10px}.report{display:flex;justify-content:space-between}.report span{background:#e8edf6;color:#324E7B;padding:6px 10px;border-radius:20px}button{border:0;border-radius:9px;padding:10px 15px;background:#324E7B;color:white;font-weight:bold;cursor:pointer}.outline{background:white;color:#324E7B;border:1px solid #86A6DF}.danger{background:#c0392b}.empty{text-align:center;color:#777}@media(max-width:750px){.top{flex-direction:column;align-items:stretch;gap:15px}.rooms,.stats{grid-template-columns:1fr}.room{flex-direction:column}.room img{width:100%}}
+</style>
