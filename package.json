@@ -1,5 +1,5 @@
 {
-  "name": "uniroom",
+  "name": "my-project-iti",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,8 +12,11 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "vue": "^3.5.40",
-    "vue-router": "^4.6.4"
+    "bootstrap-icons": "^1.13.1",
+    "pinia": "^4.0.3",
+    "router": "^2.2.0",
+    "vue": "^3.6.0-rc.7",
+    "vue-router": "^5.3.1"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",
