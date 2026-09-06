@@ -1,0 +1,120 @@
+/* 1. خلفية داكنة فخمة مع صورة المباني */
+body {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.78)), 
+                    url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1920') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+  color: #ffffff !important;
+}
+
+/* 2. تفريغ الخلفيات لتظهر صورة المباني */
+#app, 
+main, 
+.home-page,
+section {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 3. الهيدر (Navbar) زجاجي وواضح */
+.navbar {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.navbar-brand, 
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover {
+  color: #60a5fa !important;
+}
+
+/* 4. العناوين التي تظهر مباشرة على الخلفية الداكنة تكون بيضاء وواضحة */
+.home-page > h1, 
+.home-page > p,
+.hero-section h1,
+.hero-section p,
+section > h1:not(.card h1), 
+section > p:not(.card p) {
+  color: #ffffff !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* 5. العناوين المحددة اللي طلبتيها تكون باللون الكحلي الواضح */
+.steps-title,
+.why-us-title,
+section h2:not(.card h2), 
+div h2:not(.card h2),
+h2.text-center {
+  color: #1e3a8a !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  padding: 8px 20px !important;
+  border-radius: 12px !important;
+  display: inline-block !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+  text-shadow: none !important;
+}
+
+/* 6. الكروت (Cards) بيضاء وزجاجية مع نص كحلي واضح بداخلها */
+.card,  
+.city-card,
+.stat-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+  transition: transform 0.3s ease;
+}
+
+.card:hover,
+.city-card:hover {
+  transform: translateY(-5px);
+}
+
+/* إجبار النصوص داخل الكروت والبطاقات تكون باللون الكحلي الواضح */
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6, 
+.card p, .card span, .card label,
+.city-card h3, .city-card span, .stat-card h3, .stat-card p {
+  color: #1e3a8a !important;
+  text-shadow: none !important;
+}
+
+/* 7. الفوتر متناسق */
+footer, .footer {
+  background: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+footer a {
+  color: #93c5fd !important;
+}
+
+/* 8. الأزرار */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 10px 24px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  color: #ffffff !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af) !important;
+}
