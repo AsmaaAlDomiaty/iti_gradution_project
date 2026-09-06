@@ -10,6 +10,10 @@ const router = createRouter({
     
     // باقي صفحات الفريق (اختياري ربطها الآن)
     { path: '/rooms', name: 'rooms', component: () => import('../views/RoomsView.vue') },
+<<<<<<< HEAD
+=======
+    {  path: '/search',  name: 'Search',  component: () => import('@/views/SearchListingView.vue')}, 
+>>>>>>> 7c81662 (search feature added)
     { path: '/details', name: 'details', component: () => import('../views/DetailsView.vue') },
     { path: '/login', name: 'login', component: () => import('../views/LoginView.vue') },
     { path: '/dashboard', name: 'dashboard', component: () => import('../views/DashboardView.vue') },

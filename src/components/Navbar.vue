@@ -16,7 +16,11 @@
 
       <!-- اللوجو (اليمين) -->
       <router-link to="/" class="brand-logo">
+<<<<<<< HEAD
         <span class="logo-name">UniRoom</span>
+=======
+        <span class="logo-name">سكني</span>
+>>>>>>> 7c81662 (search feature added)
         <span class="logo-box">🏠</span>
       </router-link>
     </div>

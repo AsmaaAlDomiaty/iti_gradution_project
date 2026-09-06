@@ -3,7 +3,11 @@
     <!-- قسم التعريف بالمنصة -->
     <section class="about-hero text-center py-5">
       <div class="container">
+<<<<<<< HEAD
         <h1 class="fw-bold text-primary mb-3">عن منصة UniRoom</h1>
+=======
+        <h1 class="fw-bold text-primary mb-3">عن منصة سكني</h1>
+>>>>>>> 7c81662 (search feature added)
         <p class="lead text-muted mx-auto" style="max-width: 700px;">
           المنصة الأولى المخصصة لتسهيل الحياة الجامعية للطلاب، من خلال توفير سكن آمن، مريح، وقريب من الجامعات مع إمكانية إيجاد شركاء سكن متوافقين.
         </p>
@@ -87,7 +91,11 @@ const faqs = [
   },
   {
     question: 'هل الخدمة مجانية للطلاب؟',
+<<<<<<< HEAD
     answer: 'إنشاء حساب والتصفح والتواصل الأولي على منصة UniRoom مجاني بالكامل لجميع الطلاب.'
+=======
+    answer: 'إنشاء حساب والتصفح والتواصل الأولي على منصة سكني مجاني بالكامل لجميع الطلاب.'
+>>>>>>> 7c81662 (search feature added)
   }
 ]
 </script>

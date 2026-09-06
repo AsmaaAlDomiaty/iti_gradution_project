@@ -6,7 +6,11 @@
         <div class="col-lg-5 col-md-6 text-end">
           <div class="footer-brand">
             <span class="logo-icon">🏠</span>
+<<<<<<< HEAD
             <span class="logo-text">UniRoom</span>
+=======
+            <span class="logo-text">سكني</span>
+>>>>>>> 7c81662 (search feature added)
           </div>
           <p class="footer-desc">
             منصة لمساعدة الطلاب يلاقوا سكن قريب من كليتهم بأسلوب وسهولة وأمان.
@@ -36,7 +40,11 @@
 
     <!-- شريط الحقوق السفلي -->
     <div class="footer-bottom">
+<<<<<<< HEAD
       <p>© 2026 UniRoom. جميع الحقوق محفوظة.</p>
+=======
+      <p>© 2026 سكني. جميع الحقوق محفوظة.</p>
+>>>>>>> 7c81662 (search feature added)
     </div>
   </footer>
 </template>
